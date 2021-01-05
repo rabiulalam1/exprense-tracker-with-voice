@@ -7,19 +7,18 @@ const initialState = [];
 export const ExpenseTrackerContext = createContext(initialState)
 
 export const Provider = ({ children }) => {
-    const [transaction, dispatch] = useReducer(contextReducer, initialState)
+    const [transactions, dispatch] = useReducer(contextReducer, initialState)
     
-    const deleteTransactions = (id) => {
+    const deleteTransaction = (id) => {
         dispatch({type: 'delete_transaction', payload: id})
     }
 
-    const addTransactions = (transaction) => {
+    const addTransaction = (transaction) => {
         dispatch({type: 'add_transaction', payload: transaction})
     }
 
-    console.log(transaction)
     return (
-        <ExpenseTrackerContext.Provider value={{deleteTransactions, addTransactions}}>
+        <ExpenseTrackerContext.Provider value={{deleteTransaction, addTransaction, transactions}}>
             {children}
         </ExpenseTrackerContext.Provider>
     )
