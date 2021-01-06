@@ -20,7 +20,6 @@ const Form = () => {
     
     const createTransaction = () => {
         const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4() }
-        console.log(transaction)
         addTransaction(transaction)
         setFormData(initialState)
     }

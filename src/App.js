@@ -1,4 +1,4 @@
-//1:26:00
+//1:44:00
 
 import React from 'react';
 import './App.css';
@@ -16,13 +16,13 @@ function App() {
     <div className="App">
       <Grid className={classes.grid} container spacing={0} alignItems="center" justify="center" style={{ height: '100vh' }}>
         <Grid item xs={12} sm={4}>
-          <Details title='Incomes'/>
+          <Details title='Income'/>
         </Grid>
         <Grid item xs={12} sm={3}>
           <Main />
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Details title='Expenses' />
+          <Details title='Expense' />
         </Grid>
       </Grid>
     </div>
